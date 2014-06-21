@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="giS-un-2xf">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+    </dependencies>
+    <scenes>
+        <!--Company View Controller - Tech Blog-->
+        <scene sceneID="IFh-xx-eip">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fse-Wq-AHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="tIc-Vf-97f" customClass="CompanyViewController" customModule="RSSReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5fg-gE-NE4">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="ctH-Nj-4sQ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ctH-Nj-4sQ" id="JQP-Hk-Vvd">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="XGl-Ib-rZX" kind="show" identifier="selectBlog" id="xug-6V-5Mm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tIc-Vf-97f" id="WfF-GE-a2n"/>
+                            <outlet property="delegate" destination="tIc-Vf-97f" id="Syb-Ua-QZz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tech Blog" id="7p3-Re-guu"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="381" y="383"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gFd-dF-7hy">
+            <objects>
+                <navigationController id="giS-un-2xf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="93s-OI-GEu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tIc-Vf-97f" kind="relationship" relationship="rootViewController" id="bEw-hj-Zag"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDZ-v8-A5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-319" y="383"/>
+        </scene>
+        <!--View Controller - Blog Post-->
+        <scene sceneID="5ly-CE-PfL">
+            <objects>
+                <tableViewController id="XGl-Ib-rZX" customClass="ViewController" customModule="RSSReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="G53-DN-L2b">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="Rsk-pu-j6m">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rsk-pu-j6m" id="Tnc-u6-HI7">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XGl-Ib-rZX" id="M5d-ex-f0f"/>
+                            <outlet property="delegate" destination="XGl-Ib-rZX" id="lPl-tC-YWX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Blog Post" id="TIC-ir-rn9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wSX-r3-Wo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="366"/>
+        </scene>
+    </scenes>
+</document>

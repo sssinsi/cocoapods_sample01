@@ -1,0 +1,6 @@
+platform :ios, '7.0'
+link_with 'RSSReader','RSSReaderTests'
+pod 'SVProgressHUD'
+pod 'MWFeedParser'
+pod 'KINWebBrowser'
+pod 'AFNetworking'
